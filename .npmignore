@@ -5,7 +5,7 @@
 yarn.lock
 rollup.config.js
 
-src/
+src/examples
 
 # IntelliJ project files
 .idea

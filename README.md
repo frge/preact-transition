@@ -20,26 +20,26 @@ yarn add preact-transition
 
 ### 直接用 `<script>` 引入
 
-- [开发版本]()
-- [生产版本]()
+- [开发版本](https://raw.githubusercontent.com/frge/preact-transition/master/dist/transition.js)
+- [生产版本](https://raw.githubusercontent.com/frge/preact-transition/master/dist/transition.min.js)
 
 ### CDN
 
 推荐链接到一个你可以手动更新的指定版本号：
 
 ```html
-<script src="/npm/preact-transition@0.0.2/dist/transition.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/preact-transition@0.0.3/dist/transition.js"></script>
 ```
 
-你可以在 [cdn.jsdelivr.net/npm/preact-transition](https://cdn.jsdelivr.net/npm/preact-transition) 浏览 NPM 包的源代码。
+你可以在 [cdn.jsdelivr.net/npm/preact-transition](https://cdn.jsdelivr.net/npm/preact-transition/) 浏览 NPM 包的源代码。
 
-也可以在 [unpkg](https://unpkg.com/preact-transition@2.5.16/dist/preact-transition.js) 和 [cdnjs](https://cdnjs.cloudflare.com/ajax/libs/preact-transition/0.0.2/preact-transition) 上获取 (cdnjs 的版本更新可能略滞后)。
+也可以在 [unpkg](https://unpkg.com/preact-transition@0.0.3/dist/transition.js) 。
 
 在你发布的站点中使用生产环境版本，把 transition.js 换成 transition.min.js。这是一个更小的构建，可以带来比开发环境下更快的速度体验。
 
 ## DEMO
 
-[点击这里查看DEMO](examples/index.html)
+[点击这里查看DEMO](./examples/index.html)
 
 ## Props：
  
