@@ -21,6 +21,47 @@ body {
   margin-top: 16px;
   border-radius: 10px;
 }
+.btn {
+  line-height: 2rem;
+  padding: 0 1rem;
+  font-size: 18px;
+}
+.dialog {
+  z-index: 10;
+  position: fixed;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -200px;
+  background: #fff;
+  transform-origin: center;
+  border-radius: 10px;
+}
+.dialog-enter,
+.dialog-leave-to {
+  opacity: 0;
+  box-shadow: none;
+  transform: scale(0);
+}
+.dialog-enter-active,
+.dialog-leave-active {
+  opacity: 1;
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  transition: all 300ms;
+}
+.dialog-enter-active {
+  transform: scale(1);
+}
+.dialog-leave-active {
+  transform: scale(0);
+}
+.dialog-leave,
+.dialog-enter-to {
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
 .switch {
   position: relative;
   display: inline-block;
@@ -82,45 +123,4 @@ body {
 .switch-leave .thumb,
 .switch-enter-to .thumb {
   left: 62px;
-}
-.btn {
-  line-height: 2rem;
-  padding: 0 1rem;
-  font-size: 18px;
-}
-.dialog {
-  z-index: 10;
-  position: fixed;
-  width: 400px;
-  height: 300px;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  margin-left: -150px;
-  margin-top: -200px;
-  background: #fff;
-  transform-origin: center;
-  border-radius: 10px;
-}
-.dialog-enter,
-.dialog-leave-to {
-  opacity: 0;
-  box-shadow: none;
-  transform: scale(0);
-}
-.dialog-enter-active,
-.dialog-leave-active {
-  opacity: 1;
-  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
-  transition: all 300ms;
-}
-.dialog-enter-active {
-  transform: scale(1);
-}
-.dialog-leave-active {
-  transform: scale(0);
-}
-.dialog-leave,
-.dialog-enter-to {
-  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
 }
