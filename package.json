@@ -1,23 +1,34 @@
 {
   "name": "preact-transition",
-  "version": "0.0.4",
-  "main": "dist/transition.js",
-  "module": "dist/transition.esm.js",
+  "amdName": "preactTransition",
+  "version": "0.0.5",
   "description": "`Transition` 组件将作为过渡容器使用，所有的过渡类名都将作用在此容器上，支持 `animation`，`transition` 和 `javascript` 过渡动画。",
+  "main": "dist/transition.js",
+  "jsnext:main": "dist/transition.esm.js",
+  "module": "dist/transition.esm.js",
+  "scripts": {
+    "dev": "rollup -c rollup.config.js -w",
+    "build": "rollup -c rollup.config.js",
+    "publishOnly": "npm run build"
+  },
+  "typings": "./index.d.ts",
   "keywords": [
     "preact",
     "transition",
     "animation"
   ],
+  "author": "Yingqin Zhang <frge@mail.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frge/preact-transition.git"
   },
-  "author": "Yingqin Zhang <frge@mail.com>",
-  "scripts": {
-    "dev": "rollup -c rollup.config.js -w",
-    "build": "rollup -c rollup.config.js",
-    "publishOnly": "npm run build"
+  "bugs": {
+    "url": "https://github.com/frge/preact-transition/issues"
+  },
+  "homepage": "https://github.com/frge/preact-transition#readme",
+  "peerDependencies": {
+    "preact": "*"
   },
   "devDependencies": {
     "less-plugin-autoprefix": "^1.5.1",
@@ -28,10 +39,5 @@
     "rollup-plugin-less": "^0.1.4",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-uglify": "^4.0.0"
-  },
-  "license": "MIT",
-  "homepage": "https://github.com/frge/preact-transition#readme",
-  "bugs": {
-    "url": "https://github.com/frge/preact-transition/issues"
   }
 }
