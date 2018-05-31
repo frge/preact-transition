@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "rollup -c rollup.config.js -w",
     "build": "rollup -c rollup.config.js",
-    "publishOnly": "npm run build"
+    "prepublish": "npm run build"
   },
   "typings": "./index.d.ts",
   "keywords": [

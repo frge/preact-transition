@@ -1,5 +1,5 @@
 /*!
- * preact-transition v0.0.4
+ * preact-transition v0.0.6
  * (c) 2018 Yingqin Zhang
  * Released under the MIT License.
  */
@@ -271,9 +271,8 @@
     }
 
     function before() {
-      var when = hook();// 执行 onBeforeEnter/onBeforeLeave
-      if (when !== +when) { defer(function () { return setup(); }); }
-      else { setTimeout(setup, when); }
+      hook();// 执行 onBeforeEnter/onBeforeLeave
+      defer(setup);
     }
 
     setState({transfer: key}, function () {
