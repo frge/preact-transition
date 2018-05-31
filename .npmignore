@@ -4,6 +4,7 @@
 
 yarn.lock
 rollup.config.js
+.editorconfig
 
 src/examples
 
