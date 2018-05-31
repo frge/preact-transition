@@ -1,5 +1,5 @@
 /*!
- * preact-transition v0.0.6
+ * preact-transition v0.0.7
  * (c) 2018 Yingqin Zhang
  * Released under the MIT License.
  */
