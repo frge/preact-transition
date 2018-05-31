@@ -77,9 +77,8 @@ function transit(t, name, callback) {
   }
 
   function before() {
-    const when = hook();// 执行 onBeforeEnter/onBeforeLeave
-    if (when !== +when) defer(() => setup());
-    else setTimeout(setup, when);
+    hook();// 执行 onBeforeEnter/onBeforeLeave
+    defer(setup);
   }
 
   setState({transfer: key}, () => {
