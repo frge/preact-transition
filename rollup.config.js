@@ -5,6 +5,7 @@ import {uglify} from 'rollup-plugin-uglify';
 import less from 'rollup-plugin-less';
 import Prefix from 'less-plugin-autoprefix';
 import {version} from './package.json';
+import {readFileSync, writeFileSync} from 'fs';
 
 const banner =
   '/*!\n' +
@@ -18,6 +19,8 @@ const plugins = [
   resolve({extensions: ['.js', '.jsx', '.json']}),
   commonjs(),
 ];
+
+let readmeThisPackage = false;
 
 function example() {
   return {
@@ -77,7 +80,17 @@ function dist(type, min) {
         browser: true
       }),
       commonjs(),
-      min && uglify()
+      min && uglify(),
+      {
+        name: 'md',
+        transformBundle(code) {
+          if (readmeThisPackage) return code;
+          readmeThisPackage = true;
+          writeFileSync('./README.md', readFileSync('./src/doc.md', 'utf8')
+            .replace(/\bVERSION\b/g, version));
+          return code;
+        },
+      }
     ].filter(Boolean)
   }
 }
