@@ -1,7 +1,7 @@
 {
   "name": "preact-transition",
   "amdName": "preactTransition",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "`Transition` 组件将作为过渡容器使用，所有的过渡类名都将作用在此容器上，支持 `animation`，`transition` 和 `javascript` 过渡动画。",
   "main": "dist/transition.js",
   "jsnext:main": "dist/transition.esm.js",

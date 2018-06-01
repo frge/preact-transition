@@ -20,6 +20,6 @@ export interface TransitionProps {
   [key: string]: any;
 }
 
-export class Transition extends preact.Component<TransitionProps, {}> {
+export default class Transition extends preact.Component<TransitionProps, {}> {
   render(props: TransitionProps, {}): JSX.Element;
 }
