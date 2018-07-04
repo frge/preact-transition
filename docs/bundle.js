@@ -368,10 +368,10 @@
       var this$1 = this;
 
       return (
-        preact.h( 'div', null,
-          preact.h( 'button', { className: "btn", type: "Button", onClick: function () { return this$1.setState({mode: 'in'}); } }, "show"),
-          preact.h( Transition, { className: "dialog", name: "dialog", mode: state.mode },
-            preact.h( 'p', null, "the dialog content" ),
+        preact.h( 'div', null, 
+          preact.h( 'button', { className: "btn", type: "Button", onClick: function () { return this$1.setState({mode: 'in'}); } }, "show"), 
+          preact.h( Transition, { className: "dialog", name: "dialog", mode: state.mode }, 
+            preact.h( 'p', null, "the dialog content" ), 
             preact.h( 'a', { href: "#", onClick: function () { return this$1.setState({mode: 'out'}); } }, "close")
           )
         )
@@ -396,11 +396,11 @@
 
       return (
         preact.h( Transition, {
-          className: "switch", mode: state.mode, name: "switch", onClick: function () { return this$1.setState({mode: state.mode === 'in' ? 'out' : 'in'}); } },
-          preact.h( 'div', { className: "track" },
-            preact.h( 'span', null, "on" ),
+          className: "switch", mode: state.mode, name: "switch", onClick: function () { return this$1.setState({mode: state.mode === 'in' ? 'out' : 'in'}); } }, 
+          preact.h( 'div', { className: "track" }, 
+            preact.h( 'span', null, "on" ), 
             preact.h( 'span', null, "off" )
-          ),
+          ), 
           preact.h( 'div', { className: "thumb" })
         )
       );
@@ -410,13 +410,13 @@
   }(preact.Component));
 
   preact.render((
-    preact.h( 'div', { className: "container" },
-      preact.h( 'div', { className: "row" },
-        preact.h( 'h3', null, "弹出框" ),
+    preact.h( 'div', { className: "container" }, 
+      preact.h( 'div', { className: "row" }, 
+        preact.h( 'h3', null, "弹出框" ), 
         preact.h( Dialog, null )
-      ),
-      preact.h( 'div', { className: "row" },
-        preact.h( 'h3', null, "开关" ),
+      ), 
+      preact.h( 'div', { className: "row" }, 
+        preact.h( 'h3', null, "开关" ), 
         preact.h( Switch, null )
       )
     )
