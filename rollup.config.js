@@ -27,14 +27,14 @@ function example() {
     input: `src/examples/main.jsx`,
     external: ['preact'],
     output: {
-      file: `examples/bundle.js`,
+      file: `docs/bundle.js`,
       format: 'iife',
       globals: {'preact': 'preact'},
       banner
     },
     plugins: [
       less({
-        output: `examples/bundle.css`,
+        output: `docs/bundle.css`,
         plugins: [new Prefix({browsers: ["last 2 versions"]})]
       }),
       ...plugins

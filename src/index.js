@@ -95,6 +95,12 @@ function disappearTransit(t, name, callback) {
   });
 }
 
+function getHTMLElement(el) {
+  return (el.base && el.base.nodeType && el.base.nodeName)
+    ? getHTMLElement(el.base)
+    : el;
+}
+
 /**
  * `Transition` 组件将作为过渡容器使用，
  * 所有的过渡类名都将作用在此容器上。
@@ -138,7 +144,7 @@ export default class Transition extends Component {
 
     attrs.ref = (node) => {
       isFunction(ref) && ref(node);
-      this.DOM = node;
+      this.DOM = getHTMLElement(node);
     };
 
     if (css && transitions[transfer]) {

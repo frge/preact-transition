@@ -1,5 +1,5 @@
 /*!
- * preact-transition v0.0.9
+ * preact-transition v0.1.1
  * (c) 2018 Yingqin Zhang
  * Released under the MIT License.
  */
@@ -289,6 +289,12 @@
     });
   }
 
+  function getHTMLElement(el) {
+    return (el.base && el.base.nodeType && el.base.nodeName)
+      ? getHTMLElement(el.base)
+      : el;
+  }
+
   /**
    * `Transition` 组件将作为过渡容器使用，
    * 所有的过渡类名都将作用在此容器上。
@@ -339,7 +345,7 @@
 
       attrs.ref = function (node) {
         isFunction(ref) && ref(node);
-        this$1.DOM = node;
+        this$1.DOM = getHTMLElement(node);
       };
 
       if (css && transitions[transfer]) {
