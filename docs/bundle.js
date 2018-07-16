@@ -1,5 +1,5 @@
 /*!
- * preact-transition v0.1.2
+ * preact-transition v0.1.4
  * (c) 2018 Yingqin Zhang
  * Released under the MIT License.
  */
@@ -354,7 +354,10 @@
           .join(' ');
       }
 
-      return preact.h(props.tag || 'div', attrs);
+      // todo 取消 props.tag
+      var component = props.component; if ( component === void 0 ) component = props.tag;
+
+      return preact.h(component || 'div', attrs);
     };
 
     return Transition;

@@ -31,12 +31,12 @@ yarn add preact-transition
 推荐链接到一个你可以手动更新的指定版本号：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/preact-transition@0.1.2/dist/transition.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/preact-transition@0.1.4/dist/transition.js"></script>
 ```
 
 你可以在 [cdn.jsdelivr.net/npm/preact-transition](https://cdn.jsdelivr.net/npm/preact-transition/) 浏览 NPM 包的源代码。
 
-也可以在 [unpkg](https://unpkg.com/preact-transition@0.1.2/dist/transition.js) 上获取。
+也可以在 [unpkg](https://unpkg.com/preact-transition@0.1.4/dist/transition.js) 上获取。
 
 在你发布的站点中使用生产环境版本，把 transition.js 换成 transition.min.js。这是一个更小的构建，可以带来比开发环境下更快的速度体验。
 
@@ -46,7 +46,8 @@ yarn add preact-transition
 
 ## Props
 
-* **`tag`** - string，组件的根节点标签名称，默认为 `"div"`。
+* **`component`** - string，组件的根节点标签名称，默认为 `"div"`。
+* **`tag`** - string，**已取消属性**，请使用属性 **component**。
 * **`name`** - string，用于自动生成 CSS 过渡类名，默认类名为 `"t"`。例如：name: 'fade' 将自动拓展为下列类名：
 
   - `.fade-enter` - 进入前被添加到组件根节点上

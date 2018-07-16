@@ -156,6 +156,9 @@ export default class Transition extends Component {
         .join(' ');
     }
 
-    return h(props.tag || 'div', attrs);
+    // todo 取消 props.tag
+    const {component = props.tag} = props;
+
+    return h(component || 'div', attrs);
   }
 }

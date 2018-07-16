@@ -1,22 +1,23 @@
 import {RenderableProps, Component} from 'preact';
 
 export interface TransitionDone {
-  (when?: number);
+  (when?: number): void;
 }
 
 export interface TransitionProps {
-  tag?: string;
+  component?: string;
+  tag?: string;// 被取消的属性
   name?: string;
   css?: boolean;
   appear?: boolean;
   type?: string;
   mode?: string;
-  onBeforeEnter?(el: Element);
-  onEnter?(el: Element, done: TransitionDone);
-  onAfterEnter?(el: Element, disappear?: true);
-  onBeforeLeave?(el: Element);
-  onLeave?(el: Element, done: TransitionDone);
-  onAfterLeave?(el: Element, disappear?: true);
+  onBeforeEnter?(el: Element): void;
+  onEnter?(el: Element, done: TransitionDone): void;
+  onAfterEnter?(el: Element, disappear?: true): void;
+  onBeforeLeave?(el: Element): void;
+  onLeave?(el: Element, done: TransitionDone): void;
+  onAfterLeave?(el: Element, disappear?: true): void;
   [key: string]: any;
 }
 
