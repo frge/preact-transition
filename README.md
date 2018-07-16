@@ -42,7 +42,7 @@ yarn add preact-transition
 
 ## DEMO
 
-[点击这里查看DEMO](./examples/index.html)
+[点击这里查看DEMO](https://nkcjs.github.io/preact-transition/)
 
 ## Props
 
