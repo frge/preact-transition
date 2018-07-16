@@ -1,5 +1,5 @@
 /*!
- * preact-transition v0.1.4
+ * preact-transition v0.1.5
  * (c) 2018 Yingqin Zhang
  * Released under the MIT License.
  */
@@ -214,14 +214,14 @@
     'onLeave',
     'onAfterLeave' ];
 
-  var nonWrapProps = hooks.concat( ['type'],
+  var excludeProps = hooks.concat( ['type'],
     ['mode'],
     ['appear'],
     ['tag'],
     ['ref'],
     ['name'],
-    ['css']
-  );
+    ['css'],
+    ['component'] );
 
   function transit(t, name, callback) {
     var setState = t.setState.bind(t);
@@ -341,7 +341,7 @@
       var ref = props.ref;
       var name = props.name; if ( name === void 0 ) name = 't';
       var css = props.css; if ( css === void 0 ) css = true;
-      var attrs = without(props, nonWrapProps);
+      var attrs = without(props, excludeProps);
 
       attrs.ref = function (node) {
         isFunction(ref) && ref(node);

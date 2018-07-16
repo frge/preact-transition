@@ -22,7 +22,7 @@ const hooks = [
   // 'onLeaveCancelled',
 ];
 
-const nonWrapProps = [
+const excludeProps = [
   ...hooks,
   'type',
   'mode',
@@ -30,7 +30,8 @@ const nonWrapProps = [
   'tag',
   'ref',
   'name',
-  'css'
+  'css',
+  'component',
 ];
 
 function transit(t, name, callback) {
@@ -140,7 +141,7 @@ export default class Transition extends Component {
 
   render(props, {transfer = -1}) {
     const {ref, name = 't', css = true} = props;
-    const attrs = without(props, nonWrapProps);
+    const attrs = without(props, excludeProps);
 
     attrs.ref = (node) => {
       isFunction(ref) && ref(node);
