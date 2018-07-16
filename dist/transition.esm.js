@@ -1,5 +1,5 @@
 /*!
- * preact-transition v0.1.1
+ * preact-transition v0.1.2
  * (c) 2018 Yingqin Zhang
  * Released under the MIT License.
  */
@@ -341,7 +341,7 @@ var Transition = (function (Component$$1) {
 
     attrs.ref = function (node) {
       isFunction(ref) && ref(node);
-      this$1.DOM = getHTMLElement(node);
+      this$1.DOM = node && getHTMLElement(node);
     };
 
     if (css && transitions[transfer]) {

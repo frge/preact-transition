@@ -1,4 +1,4 @@
-import * as preact from 'preact';
+import {RenderableProps, Component} from 'preact';
 
 export interface TransitionDone {
   (when?: number);
@@ -20,6 +20,6 @@ export interface TransitionProps {
   [key: string]: any;
 }
 
-export default class Transition extends preact.Component<TransitionProps, {}> {
-  render(props: TransitionProps, {}): JSX.Element;
+export default class Transition extends Component<TransitionProps, {}> {
+  render(props: RenderableProps<TransitionProps>, {}): JSX.Element;
 }

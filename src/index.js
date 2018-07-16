@@ -144,7 +144,7 @@ export default class Transition extends Component {
 
     attrs.ref = (node) => {
       isFunction(ref) && ref(node);
-      this.DOM = getHTMLElement(node);
+      this.DOM = node && getHTMLElement(node);
     };
 
     if (css && transitions[transfer]) {
