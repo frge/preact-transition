@@ -118,8 +118,10 @@ export default class Transition extends Component {
    */
   constructor(props) {
     super(props);
-    this.state.transfer = -1;
-    this.state.mode = undefined;
+    this.state = {
+      transfer: -1,
+      mode = undefined
+    }
     this.DOM = null;
   }
 
